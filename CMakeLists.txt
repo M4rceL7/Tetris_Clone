@@ -11,7 +11,10 @@ link_directories(${SDL2_LIB_DIR})
 
 add_executable(Tetris_Clone Main.cpp
         pieces.h
-        pieces.cpp)
+        pieces.cpp
+        board.cpp
+        board.h
+        board.h)
 
 target_link_libraries(${PROJECT_NAME} SDL2main SDL2)
 
