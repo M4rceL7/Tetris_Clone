@@ -39,7 +39,7 @@ void board::StorePiece(int pX, int pY, int pPiece, int pRotation) {
 
 /*
 ======================================
-Check if the game is over becase a piece have achived the upper position
+Check if the game is over because a piece has hit the upper position
 
 Returns true or false
 ======================================
@@ -129,7 +129,7 @@ Parameters:
 ======================================
 */
 
-int board::GetyPosInPixels(int pPos) {
+int board::GetyPosInPixels(int pPos) const {
     return ((mScreenHeight - (BLOCK_SIZE * BOARD_HEIGHT))+ (pPos * BLOCK_SIZE));
 }
 
@@ -160,7 +160,7 @@ bool board::IsPossibleMovement(int pX, int pY, int pPiece, int pRotation) {
                         return false;
             }
 
-            //Checks if the piece have collisioned with a block already stored in the map
+            //Checks if the piece had a collision with a block already stored in the map
             if (j1 >= 0){
                 if ((mPieces->GetBlockType(pPiece, pRotation, j2, i2)!=0) &&
                         (!IsFreeBlock(i1,j1)))

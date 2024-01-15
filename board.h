@@ -21,8 +21,8 @@ public:
 
     board(Pieces *pPieces, int pScreenHeight);
 
-    int GetXPosInPixels (int pPos);
-    int GetyPosInPixels (int pPos);
+    static int GetXPosInPixels (int pPos);
+    int GetyPosInPixels (int pPos) const;
     bool IsFreeBlock (int pX, int pY);
     bool IsPossibleMovement (int pX, int pY, int pPiece, int pRotation);
     void StorePiece (int pX, int pY, int pPiece, int pRotation);
