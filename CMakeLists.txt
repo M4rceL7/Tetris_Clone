@@ -14,7 +14,11 @@ add_executable(Tetris_Clone Main.cpp
         pieces.cpp
         board.cpp
         board.h
-        board.h)
+        board.h
+        game.cpp
+        game.h
+        IO.cpp
+        IO.h)
 
 target_link_libraries(${PROJECT_NAME} SDL2main SDL2)
 
